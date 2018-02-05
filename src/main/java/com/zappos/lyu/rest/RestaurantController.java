@@ -19,7 +19,9 @@ public class RestaurantController {
 
     @RequestMapping("/")
     public List<Restaurant> getRestaurants() {
-        return cr.findAll();
+        List<Restaurant> restaurants = cr.findAll();
+        log.info("Fetch all: " + restaurants);
+        return restaurants;
     }
 
     @RequestMapping("/{id}")

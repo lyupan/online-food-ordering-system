@@ -1,9 +1,7 @@
 package com.zappos.lyu.rest;
 
-import com.zappos.lyu.domain.Menu;
 import com.zappos.lyu.domain.MenuItem;
 import com.zappos.lyu.domain.MenuItemRepository;
-import com.zappos.lyu.domain.MenuRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

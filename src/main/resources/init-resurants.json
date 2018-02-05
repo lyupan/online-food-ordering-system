@@ -1,11 +1,35 @@
 [
   {
     "name":"Restaurant3",
-    "location":"Location3"
+    "location":"Location3",
+    "menus":[
+      {
+        "type":"Breakfast",
+        "info":"BreakfastInfo1"
+      },
+      {
+        "type":"Breakfast",
+        "info":"BreakfastInfo2"
+      }
+    ]
   },
   {
     "name":"Restaurant4",
-    "location":"Location4"
+    "location":"Location4",
+    "menus":[
+      {
+        "type":"Lunch",
+        "info":"LunchInfo"
+      },
+      {
+        "type":"Dinner",
+        "info":"DinnerInfo"
+      },
+      {
+        "type":"Drinks",
+        "info":"DrinksInfo"
+      }
+      ]
   },
   {
     "name":"Restaurant5",
