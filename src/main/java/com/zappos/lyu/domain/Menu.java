@@ -9,27 +9,27 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
 @Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @AllArgsConstructor
 @NoArgsConstructor
-public class Restaurant {
+public class Menu {
 
-    @GeneratedValue
     @Id
+    @GeneratedValue
     private Long id;
 
-    private String name;
+    private String type;
 
-    private String location;
+    private String info;
 
     @Override
     public String toString() {
-        return "Restaurant{" +
+        return "Menu{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
-                ", location='" + location + '\'' +
+                ", type='" + type + '\'' +
+                ", info='" + info + '\'' +
                 '}';
     }
 }

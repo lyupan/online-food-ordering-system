@@ -1,0 +1,22 @@
+[
+  {
+    "type":"Breakfast",
+    "info":"BreakfastInfo1"
+  },
+  {
+    "type":"Breakfast",
+    "info":"BreakfastInfo2"
+  },
+  {
+    "type":"Lunch",
+    "info":"LunchInfo"
+  },
+  {
+    "type":"Dinner",
+    "info":"DinnerInfo"
+  },
+  {
+    "type":"Drinks",
+    "info":"DrinksInfo"
+  }
+]

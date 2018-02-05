@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class OnlineFoodOrderingRestController {
 
     @GetMapping("/")
-    public String test() {
+    public String hello() {
         return "Hello World!";
     }
 
