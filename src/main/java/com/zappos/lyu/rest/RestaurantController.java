@@ -2,13 +2,14 @@ package com.zappos.lyu.rest;
 
 import com.zappos.lyu.domain.Restaurant;
 import com.zappos.lyu.domain.RestaurantRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("/restaurants")
 public class RestaurantController {
@@ -26,4 +27,20 @@ public class RestaurantController {
         return cr.findOne(id);
     }
 
+    @PostMapping("/")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void upload(@RequestBody List<Restaurant> restaurants) {
+        log.info("save restaurants: " + restaurants);
+        cr.save(restaurants);
+    }
+
+    @DeleteMapping("/")
+    public void deleteAll() {
+        cr.deleteAll();
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteById(@PathVariable("id") Long id) {
+        cr.delete(id);
+    }
 }
