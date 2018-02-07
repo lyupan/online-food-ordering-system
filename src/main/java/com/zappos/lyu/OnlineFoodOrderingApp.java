@@ -11,6 +11,8 @@ import org.springframework.context.annotation.Bean;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.LinkedList;
 
 @SpringBootApplication
 public class OnlineFoodOrderingApp {
@@ -25,7 +27,7 @@ public class OnlineFoodOrderingApp {
             Restaurant r1 = new Restaurant(null,"Restaurant1", "Location1", null);
             Menu menu = new Menu(null, "name1", "info1", r1);
             Menu[] menus = {menu};
-            r1.setMenus(new ArrayList<Menu>(Arrays.asList(menus)));
+            r1.setMenus(new LinkedList<>(Arrays.asList(menus)));
             cr.save(r1);
             cr.save(new Restaurant(null, "Restauant2", "Location2", null));
         };
