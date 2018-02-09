@@ -6,11 +6,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-//@AllArgsConstructor
 @NoArgsConstructor
 public class Menu {
 
@@ -21,6 +21,9 @@ public class Menu {
     private String type;
 
     private String info;
+
+    @OneToMany(mappedBy = "menu", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<MenuItem> items;
 
     @JsonBackReference
     @ManyToOne
@@ -38,10 +41,15 @@ public class Menu {
     }
 
     @JsonCreator
-    public Menu(@JsonProperty("id") Long id, @JsonProperty("type") String type, @JsonProperty("info") String info) {
+    public Menu(@JsonProperty("id") Long id, @JsonProperty("type") String type, @JsonProperty("info") String info, @JsonProperty("items") List<MenuItem> items) {
         this.id = id;
         this.type = type;
         this.info = info;
+        if (items != null) {
+            this.items = items;
+            for (MenuItem item : items)
+                item.setMenu(this);
+        }
     }
 
     public Menu(Long id, String type, String info, Restaurant restaurant) {
@@ -57,6 +65,7 @@ public class Menu {
                 "id=" + id +
                 ", type='" + type + '\'' +
                 ", info='" + info + '\'' +
+                ", items=" + items +
                 '}';
     }
 }

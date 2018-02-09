@@ -1,11 +1,64 @@
 [
   {
-    "name":"Restaurant3",
-    "location":"Location3",
+    "name":"Restaurant1",
+    "location":"Location1",
     "menus":[
       {
         "type":"Breakfast",
-        "info":"BreakfastInfo1"
+        "info":"BreakfastInfo",
+        "items":[
+          {
+            "name":"Item1",
+            "info":"ItemInfo1",
+            "imageUrl":"/item1",
+            "price":"1.1"
+          },
+          {
+            "name":"Item2",
+            "info":"ItemInfo2",
+            "imageUrl":"/item2",
+            "price":"2.2"
+          }]
+      },
+      {
+        "type":"Lunch",
+        "info":"LunchInfo",
+        "items":[
+          {
+            "name":"Item3",
+            "info":"ItemInfo3",
+            "imageUrl":"/item3",
+            "price":"3.3"
+          },
+          {
+            "name":"Item4",
+            "info":"ItemInfo4",
+            "imageUrl":"/item4",
+            "price":"4.4"
+          }]
+      }
+    ]
+  },
+  {
+    "name":"Restaurant2",
+    "location":"Location2",
+    "menus":[
+      {
+        "type":"Dinner",
+        "info":"DinnerInfo",
+        "items":[
+          {
+            "name":"Item5",
+            "info":"ItemInfo5",
+            "imageUrl":"/item5",
+            "price":"5.5"
+          },
+          {
+            "name":"Item6",
+            "info":"ItemInfo6",
+            "imageUrl":"/item6",
+            "price":"6.6"
+          }]
       },
       {
         "type":"Breakfast",
@@ -14,25 +67,30 @@
     ]
   },
   {
-    "name":"Restaurant4",
-    "location":"Location4",
+    "name":"Restaurant3",
+    "location":"Location3",
     "menus":[
       {
-        "type":"Lunch",
-        "info":"LunchInfo"
+        "type":"Breakfast",
+        "info":"BreakfastInfo1",
+        "items":[
+          {
+            "name":"Item1",
+            "info":"ItemInfo1",
+            "imageUrl":"/item1",
+            "price":"1.1"
+          },
+          {
+            "name":"Item2",
+            "info":"ItemInfo2",
+            "imageUrl":"/item2",
+            "price":"2.2"
+          }]
       },
       {
-        "type":"Dinner",
-        "info":"DinnerInfo"
-      },
-      {
-        "type":"Drinks",
-        "info":"DrinksInfo"
+        "type":"Breakfast",
+        "info":"BreakfastInfo2"
       }
-      ]
-  },
-  {
-    "name":"Restaurant5",
-    "location":"Location5"
+    ]
   }
 ]

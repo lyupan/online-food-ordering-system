@@ -44,11 +44,13 @@ public class RestaurantController {
 
     @DeleteMapping("/")
     public void deleteAll() {
+        log.info("Delete all restaurants ... ");
         cr.deleteAll();
     }
 
     @DeleteMapping("/{id}")
     public void deleteById(@PathVariable("id") Long id) {
+        log.info("delete restaurants by id ... ");
         cr.delete(id);
     }
 
